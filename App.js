@@ -18,7 +18,7 @@ export default function App() {
       <View style={styles.cimaEsquerda}>
 
         <Quadrado cor="#490a3d" lado={10}/>
-        <Quadrado cor="#bd1550" lado={50}/>
+        <Quadrado cor="#bd1550" lado={50}/>  
         <Quadrado cor="#e97f02" lado={50}/>
       </View>
 
