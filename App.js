@@ -7,37 +7,47 @@ export default function App() {
 
 
     <View style={styles.container}>
+      <View style={styles.top}>
 
-      <View style={styles.cimaDireita}>
+        <View style={styles.cimaEsquerda}>
+          <View style={styles.bloco}>
+            <Quadrado cor="#490a3d" largura={80} altura={30}/>
+            <Quadrado cor="#490a3d" largura={80} altura={30}/>
+          </View>
 
-        <Quadrado cor="#490a3d" lado={10}/>
-        <Quadrado cor="#bd1550" lado={50}/> 
+          <View style={styles.bloco}>
+            <Quadrado cor="#490a3d" largura={80} altura={30}/>
+            <Quadrado cor="#490a3d" largura={80} altura={30}/>
+          </View>
 
+          <View style={styles.bloco}>
+            <Quadrado cor="#490a3d" largura={80} altura={30}/>
+            <Quadrado cor="#490a3d" largura={80} altura={30}/>
+          </View>
+        </View>
+
+        <View style={styles.cimaDireita}>
+          <Retangulo cor="#490a3d" largura={80} altura={30}/>
+          <Retangulo cor="#bd1550" largura={80} altura={60}/>
+        </View>
       </View>
-
-      <View style={styles.cimaEsquerda}>
-
-        <Quadrado cor="#490a3d" lado={10}/>
-        <Quadrado cor="#bd1550" lado={50}/>  
-        <Quadrado cor="#e97f02" lado={50}/>
-      </View>
-
+      
       <View style={styles.meio}>
-        <Retangulo cor="#490a3d" altura={312} largura={70}/>
-        <Retangulo cor="#bd1550" altura={312} largura={70}/>
-        <Retangulo cor="#e97f02" altura={312} largura={70}/>
-        <Retangulo cor="#f8ca00" altura={312} largura={70}/>
+        <Retangulo cor="#490a3d" altura="100%" largura={70} />
+        <Retangulo cor="#bd1550" altura="100%" largura={70} />
+        <Retangulo cor="#e97f02" altura="100%" largura={70} />
+        <Retangulo cor="#f8ca00" altura="100%" largura={70} />
       </View>
 
       <View style={styles.baixo}>
-        <Quadrado cor="#490a3d" altura={40} largura={80}/>
-        <Quadrado cor="#bd1550" altura={60} largura={80}/>
-        <Quadrado cor="#e97f02" altura={80} largura={80}/>
-        <Quadrado cor="#f8ca00" altura={100} largura={80}/>
+        <Retangulo cor="#490a3d" altura={40} largura={80} />
+        <Retangulo cor="#bd1550" altura={60} largura={80} />
+        <Retangulo cor="#e97f02" altura={80} largura={80} />
+        <Retangulo cor="#f8ca00" altura={100} largura={80} />
       </View>
 
 
-      
+
     </View>
   );
 }
@@ -45,38 +55,47 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    justifyContent: 'flex-start',
   },
 
-  cimaDireita:{
-    flexDirection:'row',
-    justifyContent:'space-evenly',
-    width: '100%',
-    backgroundColor:'#c1a2a0'
+  top:{
+    flex: 1,
+    flexDirection: "row",
+    borderWidth: 1,
   },
 
-  cimaEsquerda:{
-    flexDirection:'row',
-    justifyContent:'space-evenly',
-    width: '100%',
-    backgroundColor:'#c1a2a0'
-  },
-
-  meio:{
+  cimaDireita: {
     flex:1,
     flexDirection:'row',
-    justifyContent:'space-evenly',
-    alignItems:'flex-end',
-    width: '100%',
-    backgroundColor:'#725b75'  
+    justifyContent: 'space-between',
+    paddingLeft:10,
+    alignItems:'flex-start',
+    backgroundColor: '#c1a2a0',
   },
 
-  baixo:{
+  cimaEsquerda: {
     flex:1,
-    justifyContent:'space-evenly',
+    justifyContent: 'space-around',
+    borderRightWidth:1,
+    backgroundColor: '#c1a2a0'
+  },
+
+  bloco:{
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
+
+  meio: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-end',
+    width: '100%',
+    backgroundColor: '#725b75'
+  },
+
+  baixo: {
+    flex: 1,
+    justifyContent: 'space-between',
     flexDirection: 'row',
     alignItems: 'flex-end',
     width: '100%',
